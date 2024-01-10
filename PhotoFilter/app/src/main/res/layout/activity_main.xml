@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?colorOnPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:paddingHorizontal="@dimen/md"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/sm"
+                android:padding="@dimen/sm"
+                app:drawableEndCompat="@drawable/ic_check"
+                app:drawableTint="@color/secondary_color_variant" />
+
+            <TextView
+                android:id="@+id/addBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/sm"
+                android:padding="@dimen/sm"
+                app:drawableEndCompat="@drawable/ic_add_photo"
+                app:drawableTint="#757575" />
+
+            <TextView
+                android:id="@+id/camBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/sm"
+                android:padding="@dimen/sm"
+                app:drawableEndCompat="@drawable/ic_cam"
+                app:drawableTint="#757575" />
+        </android.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/photoCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/sm"
+        android:paddingHorizontal="12sp"
+        app:cardElevation="6sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <ImageView
+            android:id="@+id/photoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/default_bg" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoCard"
+        app:layout_constraintVertical_bias="0.733">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/collageBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/md"
+                android:layout_marginLeft="1000dp"
+                android:drawablePadding="@dimen/md"
+                android:text="Collage"
+                app:drawableBottomCompat="@drawable/ic_collage" />
+
+            <TextView
+                android:id="@+id/filterBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/md"
+                android:drawablePadding="@dimen/md"
+                android:text="Filter"
+                app:drawableBottomCompat="@drawable/ic_filter" />
+
+            <TextView
+                android:id="@+id/brightnessBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/md"
+                android:drawablePadding="@dimen/md"
+                android:text="Brightness"
+                app:drawableBottomCompat="@drawable/ic_brightness" />
+
+            <TextView
+                android:id="@+id/contrastBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/md"
+                android:drawablePadding="@dimen/md"
+                android:text="Contrast"
+                app:drawableBottomCompat="@drawable/ic_constrast" />
+
+            <TextView
+                android:id="@+id/textBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/md"
+                android:drawablePadding="@dimen/md"
+                android:text="Text"
+                app:drawableBottomCompat="@drawable/ic_text" />
+
+            <TextView
+                android:id="@+id/shapeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/md"
+                android:drawablePadding="@dimen/md"
+                android:text="Shape"
+                app:drawableBottomCompat="@drawable/ic_shape" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <include layout="@layout/filters"/>
+
+    <include layout="@layout/brightness"/>
+
+    <include layout="@layout/contrast"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

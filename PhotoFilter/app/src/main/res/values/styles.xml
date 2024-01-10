@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="customSeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="minHeight">2dp</item>
+        <item name="maxHeight">4dp</item>
+    </style>
+    <style name="Theme.SplashTheme" parent="Theme.SplashScreenApi">
+        <item name="android:windowSplashScreenBackground">@color/teal_700</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/bg_splashscreen</item>
+        <item name="android:windowSplashScreenAnimationDuration">200</item>
+
+<!--        <item name="anpostSplashScreenTheme">@style/Theme.SplashScreenApi</item>-->
+    </style>
+    
+</resources>
